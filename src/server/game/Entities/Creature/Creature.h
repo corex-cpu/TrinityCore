@@ -27,6 +27,7 @@
 #include "GridObject.h"
 #include "MapObject.h"
 #include <list>
+#include "CustomData.h"
 
 class CreatureAI;
 class CreatureGroup;
@@ -326,6 +327,8 @@ class TC_GAME_API Creature : public Unit, public GridObject<Creature>, public Ma
         void LowerPlayerDamageReq(uint32 unDamage);
         void ResetPlayerDamageReq() { m_PlayerDamageReq = GetHealth() / 2; }
         uint32 m_PlayerDamageReq;
+
+        CreatureCustomData CustomData;
 
         uint32 GetOriginalEntry() const { return m_originalEntry; }
         void SetOriginalEntry(uint32 entry) { m_originalEntry = entry; }

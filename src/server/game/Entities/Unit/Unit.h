@@ -466,6 +466,7 @@ class TC_GAME_API DamageInfo
         uint32 GetBlock() const { return m_block; }
 
         uint32 GetHitMask() const;
+
 };
 
 class TC_GAME_API HealInfo
@@ -495,6 +496,8 @@ class TC_GAME_API HealInfo
         SpellSchoolMask GetSchoolMask() const { return _schoolMask; };
 
         uint32 GetHitMask() const;
+
+        uint32& GetHealForMod() { return _heal; } //add
 };
 
 class TC_GAME_API ProcEventInfo
